@@ -1,0 +1,20 @@
+  name:  Auto compose
+  
+  on: 
+    push:
+      branches:
+        -main 
+
+  jobs: 
+    build:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Clone repo
+          uses: actions /chekout@v4
+
+        - name: Show file list
+          run: ls -la
+
+        - name: Show index.html
+          run: cat index.html
